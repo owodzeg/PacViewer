@@ -1,0 +1,22 @@
+Due to the nature of functions most of them had to be hard coded
+But this instruction set guide is made to make it fully automated.
+
+A;B;C;D;raw_size(hex);function_name;extended_name;function_desc;param_amount;param_1_type;param_1_name;param_2_type;param_2_name...
+NOTE: If the function varies in size (or you dont know the size of function) set the raw size value to 0. Tool will automatically detect the correct size. Presetting the size in the instruction set allows the tool to go through functions faster.
+
+Instruction set entries examples:
+25;00;01;00;4;je;End of a jump;This function ends the return jump made\nby other function, causing the current address\nto go back to the saved one.\n\nNo additional parameters required.;0
+25;00;03;00;8;jwr;Jump with saving the return address;This function makes a jump to address in\nParam_1 with saving the return address.\nCurrent address goes back to saved return\naddress as soon as \"je\" function is executed.;1;uint32_t_P;Jump destination
+25;00;17;00;18;jwe;Jump when equal;This function reads a value\nfrom given pointer and compares\nit to given float.\nWhen values are equal, a jump\nis being made, specified in Param_5.;5;uint32_t;Value A pointer;uint32_t;Value A offset;uint32_t_T1;Value B type;V1;Value B;uint32_t_P;Jump destination
+25;09;09;00;0;lf;Load file;Description;3;uint32_t;Value A;uint32_t;Value B;string;Filename
+
+Param types:
+uint32_t - regular 32 bit unsigned integer
+float - regular float
+string - regular string, will keep reading until a zero byte is found. offset automatically gets to next available value
+
+uint32_t_P - indicates pointer, allows the tool to jump there
+
+uint32_t_Tx - indicates value type, X for value's id, can be used to automatically decide whether value is an int, uint, float or something different
+Vx - indicates wildcard value with type set by Tx type
+This follows the rule 0x2 = INTEGER, 0x10 = FLOAT
