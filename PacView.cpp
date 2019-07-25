@@ -83,7 +83,7 @@ PacView::PacView(std::string workdir)
     t_view[2].setOrigin(t_view[2].getGlobalBounds().width/2,t_view[2].getGlobalBounds().height/2);
 
     ///Read the instruction set
-    ifstream is("instruction_set.bin");
+    ifstream is(workdir+"instruction_set.bin");
     string buf;
 
     while(getline(is,buf))
@@ -104,7 +104,7 @@ PacView::PacView(std::string workdir)
         replaceAll(dsc,"\\\"","\"");
         tmp.i_desc = dsc;
 
-        cout << hex << int(tmp.a) << " " << int(tmp.b) << " " << int(tmp.c) << " " << int(tmp.d) << " " << dec << tmp.i_size << " " << tmp.i_name << " " << tmp.i_desc;
+        ///cout << hex << int(tmp.a) << " " << int(tmp.b) << " " << int(tmp.c) << " " << int(tmp.d) << " " << dec << tmp.i_size << " " << tmp.i_name << " " << tmp.i_desc;
 
         int param_size = atoi(p[8].c_str());
 
@@ -116,15 +116,15 @@ PacView::PacView(std::string workdir)
             p_t.push_back(p[9+(i*2)]);
             p_d.push_back(p[10+(i*2)]);
 
-            cout << " " << p[9+(i*2)] << " " << p[10+(i*2)];
+            ///cout << " " << p[9+(i*2)] << " " << p[10+(i*2)];
         }
 
         tmp.param_type = p_t;
         tmp.param_desc = p_d;
 
-        cout << " " << tmp.param_type.size() << " " << tmp.param_desc.size();
+        ///cout << " " << tmp.param_type.size() << " " << tmp.param_desc.size();
 
-        cout << endl;
+        ///cout << endl;
 
         INSSET[tmp.a][tmp.b][tmp.c][tmp.d] = tmp;
     }
