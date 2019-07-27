@@ -15,4 +15,6 @@
 25;03;01;00;0;im;Interactive menu;This function opens an\ninteractive menu with pointer that's\nbeing executed after selection.;2;string;Text;uint32_t_P;Jump destination
 25;03;02;00;0;imj;Interactive menu jump;This function executes a jump\nwhen nothing was selected in\nthe previous menu instructions.(?);1;uint32_t_P;Jump destination
 25;09;09;00;0;lf;Load file;Description;3;uint32_t;Value A;uint32_t;Value B;string;Filename
+25;1F;09;00;1C;ensp;Entity spawn;Spawns an entity with given index and ID.\nFirst two values differ when spawning\nin Debug mode.;6;uint32_t;Debug 1;uint32_t;Debug 2;uint32_t_T1;Value type;V1;Entity Index;uint32_t;Value type;ENTITY_ID;Entity ID
+25;1F;20;00;2C;eneq;Entity equipment;Gives equipment to an entity.;10;uint32_t;Debug 1;uint32_t;Debug 2;uint32_t_T1;Value type;V1;Entity Index;uint32_t_T2;Value type;V2;Equipment Index;uint32_t;Value type;EQUIP_ID;Equipment ID;uint32_t;Debug 3;uint32_t;Debug 4
 25;FF;FF;00;32;TEST;TEST;Purely for testing purposes.;4;string;STRING1;string;STRING2;uint32_t;UINT3;string;STRING4
