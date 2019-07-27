@@ -1,0 +1,358 @@
+0,Dekapon Helmet (Stage 1)
+65,Arm
+CC,Defense Scepter
+130,Destrobo Mask
+1,Dekapon Helmet (Stage 2)
+66,Repel Arm
+CD,Purity Scepter
+131,Nyontama Mask
+2,Dekapon Helmet (Stage 3)
+67,Ice Arm
+CE,Healing Scepter
+132,Wooyari Mask
+3,Megapon Helmet (Stage 1)
+68,Sleepy Arm
+CF,Firefighter Scepter
+133,Pyopyo Mask
+4,Megapon Helmet (Stage 2)
+69,Deathwringer
+D0,Defrost Scepter
+134,Kanokko Mask
+5,Megapon Helmet (Stage 3)
+6A,Great Golem Arm
+D1,Antivenom Scepter
+135,Sabara Mask
+6,Mahopon Helmet (Stage 1)
+6B,Piringar Zingar
+D2,Sleepless Scepter
+136,Mofu Mask
+7,Mahopon Helmet (Stage 2)
+6C,Chosan's Arm
+D3,Maelstrom Scepter
+137,Buhyokko Mask
+8,Mahopon Helmet (Stage 3)
+6D,Natura's Touch
+D4,Scepter of Rahmon
+138,Fumya Mask
+9,EMPTY
+6F,Dagger
+D5,Cannon
+139,Menyokki Mask
+A,EMPTY
+70,Critical Dagger
+D6,Flame Cannon
+13A,Mogyu Mask
+B,EMPTY
+71,Sleepy Dagger
+D7,Bonkadonk Cannon
+13B,Chiku Mask
+C,EMPTY
+72,Crablessa
+D8,Lullablight
+13C,Wonda Mask
+D,EMPTY
+73,Feisho
+D9,Universatile Cannon
+13D,Mashu Mask
+E,EMPTY
+74,Krauser
+DA,Howitzer
+13E,Uhoho Mask
+F,EMPTY
+75,Shiv
+DB,Ice Howitzer
+13F,Koppen Mask
+10,EMPTY
+76,Poison Shiv
+DC,Euryalus
+140,Gyaba Mask
+11,HLM006_1_109.BND (Removed)
+77,Heltopay's Kiss
+DD,Dreadmare
+141,Feisu Mask
+12,HLM006_1_110.BND (Removed)
+78,Goliamon's Shiv
+DE,Eisaiho
+142,Jasti Mask
+13,Zigoton Helmet (Stage 1)
+79,Holymadda Shiv
+DF,Laser
+143,Valo Mask
+14,Zigoton Helmet (Stage 2)
+7A,Pain of Pentavus
+E0,Critical Laser
+144,Inosen Mask
+15,Zigoton Helmet (Stage 3)
+7B,Greatsword
+E1,Hoirenho
+145,Forudo Mask
+16,Zigoton Helmet (Stage 4)
+7C,Critical Greatsword
+E2,Ichigeki
+146,Libera Mask
+17,Zigoton Helmet (Stage 5)
+7D,Ice Greatsword
+E3,Sunflare Laser
+147,Hyumitto Mask
+18,Zigoton Helmet (Stage 6)
+7F,Excalipon
+E4,Helmet
+148,Bonedeth Mask (Stage 1)
+19,Gong's Helmet (Patapon 1)
+80,Quagar
+E5,Thunder Helmet
+149,Bonedeth Mask (Stage 2)
+1A,Spiderton's Helmet
+81,Serberker
+E6,Flame Helmet
+14A,Bonedeth Mask (Stage 3)
+1B,Scorpiton's Helmet
+82,Greatblade
+E7,Ice Helmet
+14B,Robodeth Mask
+1C,Dekaton Helmet (Stage 1)
+83,Flame Greatblade
+E8,Tahla Helm
+14C,Mahodeth Mask
+1D,Kuwagatton's Helmet (Beetleton)
+84,Sleepy Greatblade
+E9,Bunny Hood
+14D,Dekadeth Mask (Stage 1)
+1E,Megaton Helmet
+85,Mono Hoshibo
+EA,Tebenos Helm
+14E,Dekadeth Mask (Stage 2)
+1F,Gong's Helmet (Patapon 2)
+86,Onigiri's Greatblade
+EB,Samurai Helm
+14F,Dekadeth Mask (Stage 3)
+20,EMPTY
+87,Murasamune
+EC,Marumenko Helm
+150,EMPTY
+21,EMPTY
+88,Kusanakin
+ED,Dolmorn Helm
+151,Claw
+22,EMPTY
+89,Axe
+EE,Shield
+152,Flaming Claw
+23,EMPTY
+8A,Stagger Axe
+EF,Flame Shield
+153,Poison Claw
+24,EMPTY
+8B,Poison Axe
+F0,Ice Shield
+154,Demonic Dark Claw
+25,Karmen Mask (Stage 1)
+8C,Hilkinga's Chillaxe
+F1,Eyeball Shield
+155,Gardsormr Ice Claw
+26,Karmen Mask (Stage 2)
+8D,Susurapon
+F2,Stinger Shield
+156,Bengal Tiger Claw
+27,Karmen Mask (Stage 3)
+8E,Axe of Hanboon
+F3,Galapagos Shield
+157,Kaisak Ultimate Claw
+28,Karmen Mask (Stage 4)
+8F,Bumpalion Axe
+F4,Octagon Shield
+158,Scythe
+29,Karmen Mask (Stage 5)
+90,Club
+F5,Alldemonium Shield
+159,Flaming Scythe
+2A,Nomen's Mask (Karmen)
+91,Lightning Club
+F6,Fireblessed Shield
+15A,Deflecting Scythe
+2B,Kimen's Mask (Karmen)
+92,Dreamweaver
+F7,Oharan Shield
+15B,Quickflash Scythe
+2C,Hukmen's Mask (Karmen)
+93,Genmaru
+F8,Greatshield
+15C,Deathsoul Scythe
+2D,Dekamen Mask (Stage 1)
+94,Mjollnir
+F9,Poison Greatshield
+15D,Great Mighty Scythe
+2E,Dekamen Mask (Stage 2)
+95,Thor
+FA,Grond Greatshield
+15E,Deathmoon Ultimate Scythe
+2F,Dekamen Mask (Stage 3)
+96,Humthor's Harm
+FB,Aegis
+15F,Otherworld Jupiter Helm
+30,Dark Hero's Helmet (Makoton)
+97,Bow
+FC,Tokoyomamori
+160,Gero Helm Valor
+31,Akumapon Helmet
+98,Flame Bow
+FD,Bacteon Greatshield
+161,Straw Boing Helm
+32,Kuwagattan's Helmet
+99,Sleepy Bow
+FE,Greatshield of Ironimo
+162,Thief Jirokichi Helm
+33,EMPTY
+9A,Bow of Apollopon
+FF,Shoulderguard
+163,Masamune Helm
+34,EMPTY
+9B,Yamibashiri
+100,Flame Shoulders
+164,Clown Helm
+35,EMPTY
+9C,Raijinpon's Bow
+101,Ice Shoulders
+165,Karib Rampage Helm
+36,EMPTY
+9D,Yumipon's Bow
+102,Frayola's Spaulder
+166,Malevolent Uranus Helm
+37,EMPTY
+9F,Poison Longbow
+103,Lonestars
+167,Bald Cap
+38,Dark One's Mask
+A0,Stagger Longbow
+104,Crono Riggers
+168,Marina Sea Helm
+39,Sword
+A1,Crossbow of Faible (Longbow)
+105,Gydeen's Shoulders
+169,Shubaba Gale Kabuto
+3A,Fire Sword
+A2,Krakabom Crossbow
+106,Cape
+3B,Ice Sword
+A3,Yoichiro
+107,Fire Cape
+3C,Sleepy Sword
+A4,Dekiramos' Crossbow
+108,Ice Cape
+3D,Flangil
+A5,Crossbow
+109,Cape of Ulysses
+3F,Fendus
+A6,Ice Crossbow
+10A,Freja's Cape
+40,Castram
+A7,Repel Crossbow
+10B,Vamp Cloak
+41,The Butcher
+A8,The Machinator
+10C,Nemean Cloak
+42,Tatepon's Sword
+A9,Illiamtel's Overture
+10D,Sandals
+43,Blade
+AA,Tesakori Shooter
+10E,Wide Awake Boots
+44,Critical Blade
+AB,Goweecha Gun
+10F,Flame Boots
+45,Lightning Blade
+AC,Horn
+110,Alarium Stomper
+46,Tsuyugiri
+AD,Flame Horn
+111,Moonwalkers
+47,Murapata
+AE,Ice Horn
+112,Lilith Shoes
+48,Blade of Astria
+AF,Healixir Tuba
+113,Hermerossa's Sandals
+49,Tsukigiri
+B0,Dragonap Tuba
+114,Horse
+4A,Spear
+B1,Sonic Demonslayer
+115,Wide Awake Horse
+4B,Critical Spear
+B2,Tuba of Panchunan
+116,Flame Horse
+4C,Repel Spear
+B3,Longhorn
+117,Sibericus The Frosty
+4D,Flame Spear 
+B4,Sleepy Longhorn
+118,Bullgam the Bully
+4E,Gesundbeit
+B5,Stagger Longhorn
+119,Ponbiscuit
+4F,Yumspar
+B6,Horn of Homugai
+11A,Halcypon
+50,Palkyria's Flight
+B7,Megaslayer
+11B,Warhorse
+51,Dokaknel's Fang
+B8,Great Howl
+11C,Ice Warhorse
+52,Poseipon's Trident
+B9,Bellophone
+11D,Poison Warhorse
+53,Yaripon's Spear
+BA,Twinhorn
+11E,Deep Impact
+54,Lance (Pike)
+BB,Lightning Twinhorn
+11F,Kotenho the King
+55,Ice Pike
+BC,Poison Twinhorn
+120,Ponteo the Victorious
+56,Stagger Pike
+BD,Horns of Hamlin
+121,Apabao the Absolute
+57,Goldora
+BE,Siren's Song
+122,Chariot
+58,Pointidon
+BF,Spriggan's Song
+123,Ice Chariot
+59,Super Cedar Log
+C0,Gjallarborn
+124,Flame Chariot
+5A,Lance of Asuwish (Pike)
+C1,Staff
+125,Critical Chariot
+5B,Halberd
+C2,Fireball Staff
+126,The Silencer
+5C,Fire Lance
+C3,Firewall Staff
+127,Ruemelter
+5D,Ice Lance
+C4,Lightning Staff
+128,Silver Murzephone
+5E,Stagger Lance
+C5,Thunderstorm Staff
+129,Chariot of Light
+5F,Romulus's Halberd
+C6,Flamesea Staff
+12A,Deedsarus Darktank
+60,Incensar
+C7,Holymist Staff
+12B,Gargan War Machine
+61,Gugnir
+C8,Darkvenom Staff
+12C,Yumiyacha Mask
+62,Battachin
+C9,Jewelsword Staff
+12D,Taterazay Mask
+63,Murakumon
+CA,Phoenix Ultimate Staff
+12E,Yarida Mask
+64,Hotenpon's Halberd
+CB,Scepter
+12F,Kibadda Mask

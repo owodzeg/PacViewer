@@ -1,0 +1,401 @@
+00,Yumiton
+64,Gigantus
+C8,Archfiend
+012C,Zigoton Tower (Patapon 1)
+01,Tateton
+65,Terantus
+C9,Archfiend Glow
+012D,Ziggertank (Patapon 1/2)
+02,Yariton
+66,Gigante King
+CA,Archfiend (Glitched?)
+012E,Ice Cave
+03,Kibaton
+67,Arch Pandara (Box)
+CB,Archfiend Glow (Glitched?)
+012F,Karmen Caravan
+04,Dekaton
+68,??? (Arch Pandara)
+CC,Archfiend
+0130,Karmen Windmill
+05,Megaton
+69,??? (Arch Pandara)
+CD,Archfiend Glow
+0131,Masked Gong (Cutscene)
+06,Gong (Latest)
+6A,The Other Vessel
+CE,Archfiend (Glitched?)
+0132,Allied Gong
+07,Yumimen
+6B,??? (The Other Vessel)
+CF,Archfiend Glow (Glitched?)
+0133,Underworld Entrance (Cutscene)
+08,Tatemen
+6C,??? (The Other Vessel)
+D0,Archfiend
+0134,Mecha Hoshipon
+09,Yarimen
+6D,Gheek Dongara (Box)
+D1,Archfiend Glow
+0135,Shakapon
+0A,Kibamen
+6F,??? (Gheek Dongara)
+D2,Archfiend (Glitched?)
+0136,Swinging Axe
+0B,Dekamen
+6F,??? (Gheek Dongara)
+D3,Archfiend Glow (Glitched?)
+0137,Hero (Cutscene)
+0C,Megamen
+70,Baros
+D4,Archfiend
+0138,??? (Cutscene)
+0D,Mahomen
+71,2nd Head (Baros)
+D5,Archfiend Glow
+0139,Moon
+0E,Robomen
+72,3rd Head (Baros)
+D6,Archfiend (Glitched?)
+013A,Glowing Floor
+0F,Akumapon Yumi
+73,Garos
+D7,Archfiend Glow (Glitched?)
+013B,Dark Hideout BG
+10,Akumapon Tate
+74,2nd Head (Garos)
+D8,Archfiend
+013C,Dark Hideout BG Pt. 2
+11,Akumapon Yari
+75,3rd Head (Garos)
+D9,Archfiend Glow
+013D,Dark Hideout BG Pt. 3
+12,Akumapon Kiba
+76,Waros
+DA,Archfiend (Glitched?)
+013E,Dark Hideout Team Totem
+13,Kuwagattan 
+77,2nd Head (Waros)
+DB,Archfiend Glow (Glitched?)
+013F,Dark Hideout ??? (Glitched)
+14,Akumapon Mega
+78,3rd Head (Waros)
+DC,Archfiend
+0140,Dark Hideout Herogate
+15,Yumideth
+79,Rocks (Patapon 1/2)
+DD,Archfiend Glow
+0141,Dark Hideout ???
+16,Tatedeth
+7A,Tall Rocks (Patapon 1/2)
+DE,Stone Patapon
+0142,Dark Hideout Battlegate
+17,Yarideth
+7B,Rubble/Rocks (Patapon 2?)
+DF,Stone Meden
+0143,Dark Hideout Flagpole
+18,Kibadeth
+7C,Small Wall (Patapon 2?)
+E0,Reviving Stone Patapon
+0144,Dark Hideout Blacksmith (Stage 1)
+19,Dekadeth
+7D,Sandbags (Patapon 2)
+E1,Bonedeth Tower
+0145,Dark Hideout Blacksmith (Stage 2)
+1A,Megadeth
+7E,Goal Flag/Finish Line
+E2,Wall with Cloth (Bonedeth)
+0146,Dark Hideout Blacksmith (Stage 3)
+1B,Mahodeth
+7F,Injured Patapon
+E3,Hatapon's Flag
+0147,Dark Hideout Blacksmith (Stage 4)
+1C,Robodeth
+80,Sunflower
+E4,Bonedeth Barracks
+0148,Dark Hero Armory
+1D,Ravenous
+81,Sparkling Sunflower
+E5,Opened Box
+0149,Dark Hero Barracks
+1E,Sonarchy
+82,Beehive
+E6,Opening Mission Sky
+014A,Dark Hoshipon
+1F,Ragewolf
+83,Sparkling Beehive
+E7,Rain (Opening Mission)
+014B,Dark Hoshipon (Again)
+20,Naughtyfins
+84,Song Holder
+E8,Pon Drum (Cutscene)
+014C,???
+21,Slogturtle
+85,Swamp/Rain Flower
+E9,Pata Drum (Cutscene)
+014D,Dark Hideout ??? (Glitched)
+22,Covet Hiss
+86,Sparking Swamp/Rain Flower
+EA,Chaka Drum (Cutscene)
+014E,Mecha Hoshipon (Dark Hideout)
+23,Buzzcrave
+87,Spider
+EB,Don Drum (Cutscene)
+014F,IDK what this is its in the ground
+24,Mochichi
+88,Sparkling Spider
+EC,Bada Bon Drum (Can be cutscene)
+0150,Cage
+25,Momochi
+89,Catapult
+ED,Pata
+0151,Living Cage
+26,Motsitsi
+8A,Glitched Catapult
+EE,Pon
+0152,???
+27,Kacheek
+8B,Desert Flower
+EF,Chaka
+0153,???
+28,Kacheek (Sand)
+8C,Hoshipon
+F0,Don
+0154,Yaripon (Cutscene)
+29,Kacheek (Swamp)
+8D,Talking Sign
+F1,Standing Hatapon (Cutscene)
+0155,??? (Cutscene) (Glitched)
+2A,Kacheek (Stone)
+8E,Patapon Struggling (Shookle)
+F2,Pata Drum (Small)
+0156,??? (Cutscene) (Glitched)
+2B,Kacheek (Snow)
+8F,WEP Totem
+F3,Hatapon's Flag
+0157,Standing Hatapon (Cutscene)
+2C,Gancheek
+90,???
+F4,???
+0158,Hatapon's Flag
+2D,Poocheek
+91,???
+F5,Magic Circle from obtaining a drum?
+0159,Silver Hoshipon (Cutscene)
+2E,Parcheek
+92,???
+F6,Background from obtaining a drum?
+015A,Portal (Cutscene)
+2F,Picheek
+93,???
+F7,Background from obtaining a drum?
+015B,Gong turns into Ravenous (Cutscene)
+30,Babatto
+94,???
+F8,???
+015C,Naughtyfins reverts to Princess (Cutscene)
+31,Zubatto
+95,???
+F9,Standing Yaripon (Cutscene)
+015D,This one is in the ground. (Cutscene?)
+32,Dobatto
+96,???
+FA,Ban Tatepon (Cutscene)
+015E,Earthend.
+33,Rappata
+97,???
+FB,Don Yumipon (Cutscene)
+015F,Past Earthend (???)
+34,Pekkora
+98,???
+FC,Ban/Don Dying
+0160,Dark Hideout Operating Table
+35,Pekkorako
+99,???
+FD,Rubble (Vanity)
+0161,Evilmass of Adamance Entrance
+36,Uji
+9A,???
+FE,Flash? (Cutscene)
+0162,Evilmass of Adamance Entrance
+37,Dodonga
+9B,???
+FF,Something Reviving? (Cutscene)
+0163,Evilmass of Adamance Entrance
+38,Majidonga
+9C,Glitched Blue Texture (???)
+0100,Sparkles (Cutscene)
+0164,Evilmass of Adamance Entrance
+39,Kacchindonga
+9D,???
+0101,???
+0165,Light (Final Cutscene)
+3A,Accursed Dodonga
+9E,???
+0102,???
+0166,Your Light (Final Cutscene)
+3B,Zaknel
+9F,???
+0103,Tall Rocks (Patapon 2/3)
+0167,Flash (Cutscene)
+3C,Dokaknel
+A0,Wall (Patapon 2/3)
+0104,Small Rocks (Patapon 2/3)
+0168,Dark Hero Glow (Ending Choice)
+3D,Gaeen
+A1,Tall Wall (Patapon 2/3)
+0105,???
+0169,Death (Ending Choice)
+3E,Dogaeen
+A2,Green Grass (Fields)
+0106,???
+016A,Sacrifice (Ending Choice)
+3F,Ciokina
+A3,Light Green Grass (Fields)
+0107,???
+016B,Shooting Star (Ending Choice)
+40,Cioking
+A4,Red Grass (Volcanoes)
+0108,???
+016C,Giant Fire (Labyrinth of Restraint)
+41,Shookle
+A5,Orange Grass (Volcanoes)
+0109,Lever (Activates when touched)
+016D,What is this thing
+42,Shooshookle
+A6,Yellow Grass (Hot Zones)
+010A,Pressure Pad (Activates when touched)
+016E,Ormen Karmen
+43,Goruru
+A7,Light Green Grass (Hot Zones)
+010B,Breakable Block (Breaks when touched)
+016F,Kharma
+44,Garuru
+A8,Cannon
+010C,Standing Hatapon (Cutscene)
+0170,Sokshi Gate
+45,Mochichichi
+A9,Chainsaw
+010D,Hatapon's Flag
+0171,Cannon (Race)
+46,Fenicchi
+AA,Snoworb Cannon
+010E,Archfiend Shrine (Estate or Earnestness)
+0172,Snoworb Cannon (Race)
+47,Manboth
+AB,what the fuck is this
+010F,Archfiend Shrine (Castle of Justice)
+0173,Iron Wall (Race)
+48,Manboroth
+AC,Breaking Structure
+0110,Archfiend Shrine (Cave of Valor)
+0174,(seems like nothing else after this)
+49,Centura
+AD,Breaking Structure (Glitched)
+0111,Archfiend Shrine (Tower of Purity)
+0175
+4A,Darantula
+AE,Breaking Structure (Glitched)
+0112,Archfiend Shrine (Evilmass of Adamance)
+0176
+4B,Kanodias
+AF,???
+0113,Archfiend Shrine (Tomb of Tolerance)
+0177
+4C,Ganodias
+B0,Breaking Structure
+0114,Archfiend Shrine (Labyrinth of Restraint)
+0178
+4D,Dettankarmen
+B1,Breaking Structure (Glitched)
+0115,Guardira Shield
+0179
+4E,Zuttankarmen
+B2,Breaking Structure (Glitched)
+0116,Shining Light (Cutscene)
+017A
+4F,Cyclops (Red)
+B3,???
+0117,Bonedeth Hut (50 Giants)
+017B
+50,Cyclops (Blue)
+B4,Chest (Patapon 2/Training Grounds)
+0118,Bonedeth Hut (Grinding Missions)
+017C
+51,Dragon (Fire)
+B5,Wooden Barricade (Patapon 2)
+0119,GIMC080.BND (Removed)
+017D
+52,Dragon (Ice)
+B6,Door (Dungeon)
+011A,Bonedeth Stagecoach
+017E
+53,Dragon (Poison)
+B7,Key Door (Dungeon)
+011B,Guillotines (Needs a timer)
+017F
+54,Fenrir
+B8,Results Screen Hero Stand
+011C,Superweapon Org
+0180
+55,Thunder Lion
+B9,Wall (Patapon 3)
+011D,Superweapon Dahl
+0181
+56,Treant
+BA,Grass (Field of Giants)
+011E,Ziggerzank (Patapon 3)
+0182
+57,Deth Treant
+BB,Blue Grass (Field of Giants)
+011F,Karmen Hut
+0183
+58,Gargoyle
+BC,Purple Grass (Volcanoes)
+0120,Karmen Fortress
+0184
+59,Enchanted Gargoyle
+BD,Pink Grass (Volcanoes)
+0121,Karmen Tower (Stone)
+0185
+5A,Death
+BE,Crying Silver Hoshipon (Cutscene)
+0122,Karmen Tower (Iron)
+0186
+5B,Enchanted Death
+BF,Box Opening (Cutscene)
+0123,Karmen Bunker (Pillbox)
+0187
+5C,Dragon Puppy
+C0,Archfiend
+0124,Karmen Iron Wall
+0188
+5D,Hyumitto
+C1,Archfiend Glow
+0125,Blizzard Tower/Ice Castle (P2/P3)
+0189
+5E,Salamander (Fire)
+C2,Archfiend (Glitched?)
+0126,Patapon Caravan (Patapon 1)
+018A
+5F,Salamander (Ice)
+C3,Archfiend Glow (Glitched?)
+0127,Zugagang (Patapon 2)
+018B
+60,Balrog
+C4,Archfiend
+0128,Mantango (Giant Mushroom...)
+018C
+61,Balrag
+C5,Archfiend Glow
+0129,Catapult (Facing towards you)
+018D
+62,Golem
+C6,Archfiend (Glitched?)
+012A,Zigoton Caravan (Patapon 1)
+018E
+63,Golem (Ice)
+C7,Archfiend Glow (Glitched?)
+012B,Zigoton Windmill (Patapon 1)
+018F
+599
