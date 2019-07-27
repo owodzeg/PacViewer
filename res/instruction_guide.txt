@@ -20,3 +20,8 @@ uint32_t_P - indicates pointer, allows the tool to jump there
 uint32_t_Tx - indicates value type, X for value's id, can be used to automatically decide whether value is an int, uint, float or something different
 Vx - indicates wildcard value with type set by Tx type
 This follows the rule 0x2 = INTEGER, 0x10 = FLOAT
+
+Special param types:
+COUNT_X - reads the value as uint32_t and uses it as the amount of next parameters. X defines the type of all parameters.
+ENTITY_ID - reads the value as uint32_t and reads the ID from entity list table. Output is a string.
+EQUIP_ID - reads the value as uint32_t and reads the ID from equipment list table. Output is a string.
