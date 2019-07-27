@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include "PacView.hpp"
 
 using namespace std;
 
@@ -43,30 +44,36 @@ void Instruction::setAddr(uint32_t addr)
     f_addr = addr;
 }
 
-void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::string> vnames)
+void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::string> vnames, PacView* pacview)
 {
     ready_names = vnames;
     int binary_offset = 4; ///don't count the instruction header
 
     for(int i=0; i<vtypes.size(); i++)
     {
+        internal_types.push_back(vtypes[i]);
+
         if(vtypes[i] == "uint32_t")
         {
             uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
             ready_params.push_back(to_hstring(num,4));
+            ready_trans_params.push_back(to_hstring(num,4));
             ready_params_pre.push_back(to_hstring(num,4,false));
             ready_types.push_back("uint32_t");
 
+            ready_offsets.push_back(binary_offset);
             binary_offset += 4;
         }
         else if(vtypes[i] == "uint32_t_P")
         {
             uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
             ready_params.push_back(to_hstring(num,4));
+            ready_trans_params.push_back(to_hstring(num,4));
             ready_params_pre.push_back(to_hstring(num,4,false));
             ready_types.push_back("uint32_t");
             pointer_addr = num;
 
+            ready_offsets.push_back(binary_offset);
             binary_offset += 4;
         }
         else if(vtypes[i].find("uint32_t_T") != std::string::npos)
@@ -75,6 +82,7 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
 
             uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
             ready_params.push_back(to_hstring(num,4));
+            ready_trans_params.push_back(to_hstring(num,4));
             ready_params_pre.push_back(to_hstring(num,4,false));
 
             if(num == 0x10) ///float
@@ -99,6 +107,7 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
             }
 
             ready_types.push_back("uint32_t");
+            ready_offsets.push_back(binary_offset);
             binary_offset += 4;
         }
         else if(vtypes[i] == "float")
@@ -107,13 +116,17 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
             float dest = *((float*)&num);
 
             ready_params.push_back(to_string_with_precision(dest,6));
+            ready_trans_params.push_back(to_string_with_precision(dest,6));
             ready_params_pre.push_back(to_string_with_precision(dest,6));
             ready_types.push_back("float");
+            ready_offsets.push_back(binary_offset);
             binary_offset += 4;
         }
         else if(vtypes[i] == "string")
         {
             ///Read until null is found, end reading when amount of bytes is %4 = 0 (because its how it works)
+            ready_offsets.push_back(binary_offset);
+
             char buf = 0xFF;
             string str = "";
 
@@ -131,8 +144,33 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
             binary_offset++;
 
             ready_params.push_back(str);
+            ready_trans_params.push_back(str);
             ready_params_pre.push_back(str);
             ready_types.push_back("string");
+        }
+        else if(vtypes[i] == "ENTITY_ID")
+        {
+            uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
+            string entity = pacview->entities[num];
+
+            ready_params.push_back(to_hstring(num,4));
+            ready_params_pre.push_back(to_hstring(num,4,false));
+            ready_trans_params.push_back(entity);
+            ready_types.push_back("uint32_t");
+            ready_offsets.push_back(binary_offset);
+            binary_offset += 4;
+        }
+        else if(vtypes[i] == "EQUIP_ID")
+        {
+            uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
+            string entity = pacview->equips[num];
+
+            ready_params.push_back(to_hstring(num,4));
+            ready_params_pre.push_back(to_hstring(num,4,false));
+            ready_trans_params.push_back(entity);
+            ready_types.push_back("uint32_t");
+            ready_offsets.push_back(binary_offset);
+            binary_offset += 4;
         }
     }
 }
@@ -177,7 +215,7 @@ void Instruction::setVisuals(uint8_t a, uint8_t b, uint8_t c, uint8_t d, std::st
     for(int i=0; i<ready_params.size(); i++)
     {
         f_desc += ready_types[i]+" = "+ready_params[i]+"\n";
-        f_desc_translated += ready_names[i]+" = "+ready_params[i]+"\n";
+        f_desc_translated += ready_names[i]+" = "+ready_trans_params[i]+"\n";
         f_param += ready_params_pre[i];
 
         if(i != ready_params.size()-1)

@@ -1,4 +1,5 @@
 #ifndef PACVIEW_HPP
+#define PACVIEW_HPP
 
 #include <SFML/Graphics.hpp>
 #include <vector>
@@ -24,6 +25,8 @@ class PacView
 
     std::string file;
     std::vector<Instruction> instructions;
+    std::map<unsigned int,std::string> entities;
+    std::map<unsigned int,std::string> equips;
 
     std::map<int,bool> mouseMap;
     std::map<int,bool> keyMap;

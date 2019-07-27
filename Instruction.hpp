@@ -1,6 +1,10 @@
 #ifndef INSTRUCTION_HPP
+#define INSTRUCTION_HPP
+
 #include <vector>
 #include <iostream>
+
+class PacView;
 
 class Instruction
 {
@@ -22,8 +26,11 @@ class Instruction
     std::vector<unsigned char> raw_data; ///Store RAW bytes
     std::vector<std::string> ready_params; ///Parameters ready to show
     std::vector<std::string> ready_types; ///Types ready to show
+    std::vector<std::string> internal_types; ///Internal name of the type (as defined in dict file)
     std::vector<std::string> ready_params_pre; ///Parameters ready to show (for preview)
     std::vector<std::string> ready_names; ///Preset understandable names for certain parameters
+    std::vector<std::string> ready_trans_params; ///Preset understandable parameters for functions
+    std::vector<uint32_t> ready_offsets; ///In-instruction offset for each value, helpful for shifting all the pointers
 
     /**
     -=- Value types -=-
@@ -38,7 +45,7 @@ class Instruction
     Instruction();
     void setID(int c, int f);
     void setAddr(uint32_t addr);
-    void parseValues(std::vector<std::string> vtypes, std::vector<std::string> vnames);
+    void parseValues(std::vector<std::string> vtypes, std::vector<std::string> vnames, PacView* pacview);
     void setRaw(std::vector<unsigned char> value);
     void setVisuals(uint8_t a, uint8_t b, uint8_t c, uint8_t d, std::string name, std::string exname, std::string desc);
 };

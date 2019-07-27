@@ -82,9 +82,12 @@ PacView::PacView(std::string workdir)
     t_view[2].setString("Translated");
     t_view[2].setOrigin(t_view[2].getGlobalBounds().width/2,t_view[2].getGlobalBounds().height/2);
 
+    cout << "[PAC] Loading instruction set... ";
+
     ///Read the instruction set
     ifstream is(workdir+"instruction_set.bin");
     string buf;
+    int ic = 0;
 
     while(getline(is,buf))
     {
@@ -127,9 +130,38 @@ PacView::PacView(std::string workdir)
         ///cout << endl;
 
         INSSET[tmp.a][tmp.b][tmp.c][tmp.d] = tmp;
+        ic++;
     }
 
     is.close();
+
+    cout << ic << " instructions loaded." << endl;
+
+    ifstream el(workdir+"entityhex.dat");
+
+    while(getline(el,buf))
+    {
+        string id = buf.substr(0,buf.find_first_of(","));
+        string name = buf.substr(buf.find_first_of(",")+1);
+        entities[hstoui(id)] = name;
+    }
+
+    el.close();
+
+    cout << "[PAC] Loaded entity list" << endl;
+
+    ifstream eq(workdir+"equiphex.dat");
+
+    while(getline(eq,buf))
+    {
+        string id = buf.substr(0,buf.find_first_of(","));
+        string name = buf.substr(buf.find_first_of(",")+1);
+        equips[hstoui(id)] = name;
+    }
+
+    eq.close();
+
+    cout << "[PAC] Loaded equipment list" << endl;
 }
 
 void PacView::read(std::string file)
@@ -265,7 +297,7 @@ void PacView::read(std::string file)
 
                 ///cout << "[PAC] " << hex << "0x" << offset << dec << " " << INSSET[a][b][c][d].i_name << ", bb: " << binary_buff.size() << endl;
                 ins.setRaw(binary_buff);
-                ins.parseValues(INSSET[a][b][c][d].param_type,INSSET[a][b][c][d].param_desc);
+                ins.parseValues(INSSET[a][b][c][d].param_type,INSSET[a][b][c][d].param_desc,this);
                 ins.setVisuals(a,b,c,d,INSSET[a][b][c][d].i_name,INSSET[a][b][c][d].ex_name,INSSET[a][b][c][d].i_desc);
 
                 offset += binary_buff.size();
