@@ -10,6 +10,7 @@
 25;00;0D;00;C;svbo;Subtract value by 1;This function subtracts value at\ngiven pointer in memory by 1.;2;uint32_t;Memory pointer;uint32_t;Memory offset;
 25;00;17;00;18;jwe;Jump when equal;This function reads a value\nfrom given pointer and compares\nit to given float.\nWhen values are equal, a jump\nis being made, specified in Param_5.;5;uint32_t;Value A pointer;uint32_t;Value A offset;uint32_t_T1;Value B type;V1;Value B;uint32_t_P;Jump destination
 25;00;18;00;18;jwne;Jump when not equal;This function reads a value\nfrom given pointer and compares\nit to given float.\nWhen values are not equal, a jump\nis being made, specified in Param_5.;5;uint32_t;Value A pointer;uint32_t;Value A offset;uint32_t_T1;Value B type;V1;Value B;uint32_t_P;Jump destination
+25;00;1D;00;18;jwkp;Jump when key pressed;This function calls a jump from the pointer\nonce a specific key press is called.;5;uint32_t;Unknown;uint32_t;Unknown;uint32_t;Value Type;KEYBIND_ID;Key pressed;uint32_t_P;Jump destination
 25;00;31;00;0;dev1;Developer comment;Comment left by the developers of the game.;1;string;Text
 25;00;32;00;0;dev2;Developer comment;Comment left by the developers of the game.;1;string;Text
 25;03;01;00;0;im;Interactive menu;This function opens an\ninteractive menu with pointer that's\nbeing executed after selection.;2;string;Text;uint32_t_P;Jump destination
@@ -24,4 +25,4 @@
 25;1F;1E;00;1C;envr;Entity view range;Defines seeing distance for an entity.;6;uint32_t;Debug 1;uint32_t;Debug 2;uint32_t_T1;Value type;V1;Entity Index;uint32_t_T2;Value type;V2;View range
 25;1F;1F;00;1C;enlp;Entity loot pool;Defines loot pool for an entity.;6;uint32_t;Debug 1;uint32_t;Debug 2;uint32_t_T1;Value type;V1;Entity Index;uint32_t_T2;Value type;V2;Loot pool
 25;1F;20;00;2C;eneq;Entity equipment;Gives equipment to an entity.;10;uint32_t;Debug 1;uint32_t;Debug 2;uint32_t_T1;Value type;V1;Entity Index;uint32_t_T2;Value type;V2;Equipment Index;uint32_t;Value type;EQUIP_ID;Equipment ID;uint32_t;Debug 3;uint32_t;Debug 4
-25;FF;FF;00;32;TEST;TEST;Purely for testing purposes.;4;string;STRING1;string;STRING2;uint32_t;UINT3;string;STRING4
+25;FF;FF;00;0;TEST;TEST;Purely for testing purposes.;5;string;STRING1;string;STRING2;uint32_t;UINT3;string;STRING4;COUNT_uint32_t;Param amount

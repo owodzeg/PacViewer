@@ -172,6 +172,37 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
             ready_offsets.push_back(binary_offset);
             binary_offset += 4;
         }
+        else if(vtypes[i] == "KEYBIND_ID")
+        {
+            uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
+            string entity = pacview->keybinds[num];
+
+            ready_params.push_back(to_hstring(num,4));
+            ready_params_pre.push_back(to_hstring(num,4,false));
+            ready_trans_params.push_back(entity);
+            ready_types.push_back("uint32_t");
+            ready_offsets.push_back(binary_offset);
+            binary_offset += 4;
+        }
+        else if(vtypes[i].find("COUNT_") != std::string::npos)
+        {
+            uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
+            string dest = vtypes[i].substr(vtypes[i].find_first_of("_")+1);
+
+            ready_params.push_back(to_hstring(num,4));
+            ready_trans_params.push_back(to_hstring(num,4));
+            ready_params_pre.push_back(to_hstring(num,4,false));
+            ready_types.push_back("uint32_t");
+
+            ready_offsets.push_back(binary_offset);
+            binary_offset += 4;
+
+            for(int c=0; c<num; c++)
+            {
+                vtypes.push_back(dest);
+                ready_names.push_back("count_"+to_string(c+1));
+            }
+        }
     }
 }
 

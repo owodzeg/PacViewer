@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include <windows.h>
 
 using namespace std;
 
@@ -50,6 +51,19 @@ unsigned int hstoui(const string &str)
     throw out_of_range(str);
 
     return u;
+}
+
+void copyToClipboard(std::string word)
+{
+    const char* output = word.c_str();
+    const size_t len = strlen(output) + 1;
+    HGLOBAL hMem =  GlobalAlloc(GMEM_MOVEABLE, len);
+    memcpy(GlobalLock(hMem), output, len);
+    GlobalUnlock(hMem);
+    OpenClipboard(0);
+    EmptyClipboard();
+    SetClipboardData(CF_TEXT, hMem);
+    CloseClipboard();
 }
 
 PacView::PacView(std::string workdir)
@@ -162,6 +176,19 @@ PacView::PacView(std::string workdir)
     eq.close();
 
     cout << "[PAC] Loaded equipment list" << endl;
+
+    ifstream ek(workdir+"keybindhex.dat");
+
+    while(getline(ek,buf))
+    {
+        string id = buf.substr(0,buf.find_first_of(","));
+        string name = buf.substr(buf.find_first_of(",")+1);
+        keybinds[hstoui(id)] = name;
+    }
+
+    ek.close();
+
+    cout << "[PAC] Loaded keybind list" << endl;
 }
 
 void PacView::read(std::string file)
@@ -660,14 +687,32 @@ void PacView::draw(sf::RenderWindow& window)
                     }
 
                     box_desc.setString(rawstring2);
+
+                    if(keyMap[sf::Keyboard::R])
+                    {
+                        copyToClipboard(rawstring);
+                        cout << "Copied RAW to clipboard" << endl;
+                    }
                 }
                 else if(view == 1)
                 {
                     box_desc.setString(instructions[i+scroll].f_desc);
+
+                    if(keyMap[sf::Keyboard::R])
+                    {
+                        copyToClipboard(instructions[i+scroll].f_desc);
+                        cout << "Copied DESC to clipboard" << endl;
+                    }
                 }
                 else if(view == 2)
                 {
                     box_desc.setString(instructions[i+scroll].f_desc_translated);
+
+                    if(keyMap[sf::Keyboard::R])
+                    {
+                        copyToClipboard(instructions[i+scroll].f_desc_translated);
+                        cout << "Copied TRA to clipboard" << endl;
+                    }
                 }
             }
             else

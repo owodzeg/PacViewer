@@ -25,3 +25,4 @@ Special param types:
 COUNT_X - reads the value as uint32_t and uses it as the amount of next parameters. X defines the type of all parameters.
 ENTITY_ID - reads the value as uint32_t and reads the ID from entity list table. Output is a string.
 EQUIP_ID - reads the value as uint32_t and reads the ID from equipment list table. Output is a string.
+KEYBIND_ID - reads the value as uint32_t and reads the ID from keybind list table. Output is a string.

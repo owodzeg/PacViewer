@@ -27,6 +27,7 @@ class PacView
     std::vector<Instruction> instructions;
     std::map<unsigned int,std::string> entities;
     std::map<unsigned int,std::string> equips;
+    std::map<unsigned int,std::string> keybinds;
 
     std::map<int,bool> mouseMap;
     std::map<int,bool> keyMap;
