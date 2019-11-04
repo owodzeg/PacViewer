@@ -11,10 +11,14 @@
 25;00;17;00;18;jwe;Jump when equal;This function reads a value\nfrom given pointer and compares\nit to given float.\nWhen values are equal, a jump\nis being made, specified in Param_5.;5;uint32_t;Value A pointer;uint32_t;Value A offset;uint32_t_T1;Value B type;V1;Value B;uint32_t_P;Jump destination
 25;00;18;00;18;jwne;Jump when not equal;This function reads a value\nfrom given pointer and compares\nit to given float.\nWhen values are not equal, a jump\nis being made, specified in Param_5.;5;uint32_t;Value A pointer;uint32_t;Value A offset;uint32_t_T1;Value B type;V1;Value B;uint32_t_P;Jump destination
 25;00;1D;00;18;jwkp;Jump when key pressed;This function calls a jump from the pointer\nonce a specific key press is called.;5;uint32_t;Unknown;uint32_t;Unknown;uint32_t;Value Type;KEYBIND_ID;Key pressed;uint32_t_P;Jump destination
+25;00;1F;00;18;jwms;Jump when menu selected;This function calls a jump from the pointer\nonce a specific menu entry is selected,\ndefined by one of interactive menu functions.;5;uint32_t;Unknown;uint32_t;Unknown;uint32_t;Menu option;uint32_t;Unknown;uint32_t_P;Jump destination
+25;00;27;00;0;flen;Enable flag;This function enables a hardcoded game flag.;1;COUNT_uint32_t;Flag amount
+25;00;28;00;0;flds;Disable flag;This function disables a hardcoded game flag.;1;COUNT_uint32_t;Flag amount
 25;00;31;00;0;dev1;Developer comment;Comment left by the developers of the game.;1;string;Text
 25;00;32;00;0;dev2;Developer comment;Comment left by the developers of the game.;1;string;Text
 25;03;01;00;0;im;Interactive menu;This function opens an\ninteractive menu with pointer that's\nbeing executed after selection.;2;string;Text;uint32_t_P;Jump destination
 25;03;02;00;0;imj;Interactive menu jump;This function executes a jump\nwhen nothing was selected in\nthe previous menu instructions.(?);1;uint32_t_P;Jump destination
+25;03;0D;00;0;imd;Interactive menu dialog;This function opens an interactive menu dialog\nwith multiple choice selection.;16;uint32_t;Unknown;uint32_t;Unknown;uint32_t;Left shift(?);uint32_t;X position;uint32_t;Top shift(?);uint32_t;Y position;uint32_t;MSG ID offset;uint32_t;Unknown;KEYBIND_ID;Back button;uint32_t;Unknown;uint32_t;Highlight option;uint32_t;Unknown;uint32_t;Display title;uint32_t;Unknown;uint32_t;Center box(?);COUNT_uint32_t;Amount of options
 25;09;09;00;0;lf;Load file;Description;3;uint32_t;Value A;uint32_t;Value B;string;Filename
 25;1F;09;00;1C;ensp;Entity spawn;Spawns an entity with given index and ID.\nFirst two values differ when spawning\nin Debug mode.;6;uint32_t;Debug 1;uint32_t;Debug 2;uint32_t_T1;Value type;V1;Entity Index;uint32_t;Value type;ENTITY_ID;Entity ID
 25;1F;0A;00;1C;encl;Entity clones;Copies the same exact entity X times.;6;uint32_t;Debug 1;uint32_t;Debug 2;uint32_t_T1;Value type;V1;Entity Index;uint32_t_T2;Value type;V2;Clone amount
