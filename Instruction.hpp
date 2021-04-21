@@ -16,6 +16,7 @@ class Instruction
 
     uint32_t f_addr;
     uint32_t pointer_addr = 0x1;
+    bool jump_with_return = false;
 
     std::string f_name;
     std::string f_exname;

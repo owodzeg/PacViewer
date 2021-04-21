@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    cout << "PacViewer v3.0.3 by Owocek" << endl;
+    cout << "PacViewer v3.0.7 by Owocek" << endl;
 
     if(argc > 1)
     {

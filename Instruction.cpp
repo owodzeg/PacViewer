@@ -51,6 +51,9 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
 
     for(int i=0; i<vtypes.size(); i++)
     {
+        if(cid == 0x12)
+        cout << "Parsing value " << vtypes[i] << endl;
+
         internal_types.push_back(vtypes[i]);
 
         if(vtypes[i] == "uint32_t")
@@ -76,6 +79,19 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
             ready_offsets.push_back(binary_offset);
             binary_offset += 4;
         }
+        else if(vtypes[i] == "uint32_t_P_ret")
+        {
+            uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
+            ready_params.push_back(to_hstring(num,4));
+            ready_trans_params.push_back(to_hstring(num,4));
+            ready_params_pre.push_back(to_hstring(num,4,false));
+            ready_types.push_back("uint32_t");
+            pointer_addr = num;
+            jump_with_return = true;
+
+            ready_offsets.push_back(binary_offset);
+            binary_offset += 4;
+        }
         else if(vtypes[i].find("uint32_t_T") != std::string::npos)
         {
             string Vid = "V"+vtypes[i].substr(vtypes[i].find_last_of("T")+1);
@@ -96,6 +112,16 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
                 }
             }
             else if(num == 0x2) ///integer
+            {
+                for(int ii=0; ii<vtypes.size(); ii++)
+                {
+                    if(vtypes[ii] == Vid)
+                    {
+                        vtypes[ii] = "uint32_t";
+                    }
+                }
+            }
+            else
             {
                 for(int ii=0; ii<vtypes.size(); ii++)
                 {
@@ -201,6 +227,29 @@ void Instruction::parseValues(std::vector<std::string> vtypes, std::vector<std::
             {
                 vtypes.push_back(dest);
                 ready_names.push_back("count_"+to_string(c+1));
+            }
+        }
+        else if(vtypes[i].find("CONTINOUS_") != std::string::npos)
+        {
+            uint32_t remain = raw_data.size() - binary_offset;
+
+            //uint32_t num = (uint32_t)raw_data[binary_offset+3] << 24 | (uint32_t)raw_data[binary_offset+2] << 16 | (uint32_t)raw_data[binary_offset+1] << 8 | (uint32_t)raw_data[binary_offset+0];
+
+            uint32_t num = remain / 4;
+            string dest = vtypes[i].substr(vtypes[i].find_first_of("_")+1);
+
+            //ready_params.push_back(to_hstring(num,4));
+            //ready_trans_params.push_back(to_hstring(num,4));
+            //ready_params_pre.push_back(to_hstring(num,4,false));
+            //ready_types.push_back("uint32_t");
+
+            //ready_offsets.push_back(binary_offset);
+            //binary_offset += 4;
+
+            for(int c=0; c<num; c++)
+            {
+                vtypes.push_back(dest);
+                ready_names.push_back("continous_"+to_string(c+1));
             }
         }
     }

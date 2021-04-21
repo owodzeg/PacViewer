@@ -121,7 +121,7 @@ PacView::PacView(std::string workdir)
         replaceAll(dsc,"\\\"","\"");
         tmp.i_desc = dsc;
 
-        ///cout << hex << int(tmp.a) << " " << int(tmp.b) << " " << int(tmp.c) << " " << int(tmp.d) << " " << dec << tmp.i_size << " " << tmp.i_name << " " << tmp.i_desc;
+        cout << hex << int(tmp.a) << " " << int(tmp.b) << " " << int(tmp.c) << " " << int(tmp.d) << " " << dec << tmp.i_size << " " << tmp.i_name << " " << tmp.i_desc << endl;
 
         int param_size = atoi(p[8].c_str());
 
@@ -143,6 +143,7 @@ PacView::PacView(std::string workdir)
 
         ///cout << endl;
 
+        //cout << tmp.a << " " << tmp.b << " " << tmp.c << " " << tmp.d << endl;
         INSSET[tmp.a][tmp.b][tmp.c][tmp.d] = tmp;
         ic++;
     }
@@ -202,9 +203,13 @@ void PacView::read(std::string file)
 
     vector<unsigned char> binary_buff;
 
+    ///last values
+    uint8_t la=0, lb=0, lc=0, ld=0;
+
     while(offset < pacs)
     {
-        ///cout << "[PAC] Reading offset 0x" << hex << offset << " / 0x" << pacs << dec << endl;
+        //cout << "[PAC] Reading offset 0x" << hex << offset << " / 0x" << pacs << dec << endl;
+        //cout << "[PAC] Last D was " << hex << int(ld) << dec << endl;
         uint8_t a,b,c,d;
         char bb;
 
@@ -238,11 +243,11 @@ void PacView::read(std::string file)
 
         int poff = offset;
 
-        if((a == 0x25) && (c != 0x0))
+        if((a == 0x25) && (c != 0x0) && (d <= 0x1))
         {
             if(binary_buff.size() > 4)
             {
-                cout << "Some additional raw data detected!" << endl;
+                cout << "Some additional raw data detected! (0x" << hex << offset << dec << ")" << endl;
                 ///Do something
                 vector<unsigned char> raw = binary_buff;
                 ///need to strip down next instruction
@@ -267,6 +272,8 @@ void PacView::read(std::string file)
             ins.setAddr(offset);
             ins.setID(b,c);
 
+            //cout << a << " " << b << " " << c << " " << d << endl;
+
             if(INSSET[a][b][c][d].l)
             {
                 if(INSSET[a][b][c][d].i_size == 0)
@@ -274,7 +281,7 @@ void PacView::read(std::string file)
                     ///If sizes are different for the same instruction
 
                     int tmp_off = offset+4;
-                    uint8_t aa,cc;
+                    uint8_t aa,cc,dd;
 
                     pacf.seekg(tmp_off);
                     pacf.read(reinterpret_cast<char*>(&aa), sizeof(uint8_t));
@@ -282,7 +289,10 @@ void PacView::read(std::string file)
                     pacf.seekg(tmp_off+0x2);
                     pacf.read(reinterpret_cast<char*>(&cc), sizeof(uint8_t));
 
-                    while(!((aa == 0x25) && (cc != 0x0)))
+                    pacf.seekg(tmp_off+0x3);
+                    pacf.read(reinterpret_cast<char*>(&dd), sizeof(uint8_t));
+
+                    while(!((aa == 0x25) && (cc != 0x0) && (dd <= 0x1)))
                     {
                         pacf.seekg(tmp_off);
                         pacf.read(reinterpret_cast<char*>(&aa), sizeof(uint8_t));
@@ -290,7 +300,10 @@ void PacView::read(std::string file)
                         pacf.seekg(tmp_off+0x2);
                         pacf.read(reinterpret_cast<char*>(&cc), sizeof(uint8_t));
 
-                        if(!((aa == 0x25) && (cc != 0x0)))
+                        pacf.seekg(tmp_off+0x3);
+                        pacf.read(reinterpret_cast<char*>(&dd), sizeof(uint8_t));
+
+                        if(!((aa == 0x25) && (cc != 0x0) && (dd <= 0x1)))
                         {
                             for(int e=0; e<4; e++)
                             {
@@ -390,6 +403,12 @@ void PacView::read(std::string file)
 
         if(offset == poff)
         offset += 4;
+
+        ///save last values
+        la = a;
+        lb = b;
+        lc = c;
+        ld = d;
     }
 
     pacf.close();
