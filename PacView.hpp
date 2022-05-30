@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "Instruction.hpp"
+#include "PacMessageBox.hpp"
 
 class PacView
 {
@@ -64,7 +65,10 @@ class PacView
     int view = 1; ///0 - RAW, 1 - Parameters, 2 - Translated
     sf::Text t_view[3];
 
-    PacView(std::string workdir);
+    std::vector<PacMessageBox> message_boxes;
+
+    PacView(std::string workdir, std::string ins_set, std::string eq_set);
+    void getEvent(sf::Event& event);
     void read(std::string file);
     int getIDbyAddr(uint32_t addr);
     void save(std::string file);

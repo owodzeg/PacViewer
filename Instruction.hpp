@@ -46,7 +46,7 @@ class Instruction
     Instruction();
     void setID(int c, int f);
     void setAddr(uint32_t addr);
-    void parseValues(std::vector<std::string> vtypes, std::vector<std::string> vnames, PacView* pacview);
+    void parseValues(std::vector<std::string>& vtypes, std::vector<std::string>& vnames, PacView* pacview);
     void setRaw(std::vector<unsigned char> value);
     void setVisuals(uint8_t a, uint8_t b, uint8_t c, uint8_t d, std::string name, std::string exname, std::string desc);
 };

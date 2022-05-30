@@ -1,0 +1,935 @@
+0,(no translation needed) 
+1,Pon Drum 
+2,Pata Drum 
+3,Chaka Drum 
+4,Don Drum 
+5,Rain Miracle 
+6,Tailwind Miracle 
+7,Storm Miracle 
+8,Earthquake Miracle 
+9,The Miracle of the Blizzard 
+a,Brimstone Juju 
+b,Duck n' Cover Juju 
+c,　 
+d,Blank Map 
+e,Bent Compass 
+f,Cloudy Crystal 
+10,Broken Sign 
+11,Black Star 
+12,Mud-stained Map 
+13,Soft Lithograph 
+14,Unopenable Box 
+15,Sealed Scroll 
+16,　 
+17,Square Wheel 
+18,　 
+19,Grey Rainbow 
+1a,　 
+1b,Mater Sprout 
+1c,Patapata Song 
+1d,Ponpon Song 
+1e,Chakachaka Song 
+1f,Ponpata Song 
+20,Ponchaka Song 
+21,DON DON Song 
+22,DON CHAKA Song 
+23,Yaripon's Memory 
+24,Tatepon's Memory 
+25,Yumipon's Memory 
+26,Kibapon's Memory 
+27,Dekapon's Memory 
+28,Megapon's Memory 
+29,Toripon's Memory 
+2a,Robopon's Memory 
+2b,Mahopon's Memory 
+2c,Cap 
+2d,Pakapon Cap 
+2e,Kimpon Cap 
+2f,Zakpon Cap 
+30,Kampon Cap 
+31,Gashapon Cap 
+32,Yapon Cap 
+33,Tsukupon Cap 
+34,Ka-ching 
+35,Potion 
+36,Leather Meat 
+37,Tender Meat 
+38,Dream Meat 
+39,Mystery Meat 
+3a,Demon Steak 
+3b,Berara Hide 
+3c,Gotsutsu Hide 
+3d,Subebe Hide 
+3e,Mezura Hide 
+3f,Demon Hide 
+40,Kuneri Fang 
+41,Itete Fang 
+42,Gizaza Fang 
+43,Nazozo Fang 
+44,Demon Fang 
+45,Mudada Bone 
+46,Gashirin Bone 
+47,Dodeka Bone 
+48,Ottama Bone 
+49,Demon Bone 
+4a,Stone 
+4b,Hard Iron 
+4c,Titanium Ore 
+4d,Mytheerial 
+4e,Adamanman 
+4f,Leaf 
+50,Banal Branch 
+51,Cherry Tree 
+52,Hinoki 
+53,Super Cedar 
+54,Bowtie Tree 
+55,Eyeball Cabbage 
+56,Crying Carrot 
+57,Predator Pumpkin 
+58,Hazy Shroom 
+59,Guddorian 
+5a,Kasu Seed 
+5b,Yoka Seed 
+5c,Deka Seed 
+5d,Bibi Seed 
+5e,Mater Sprout 
+5f,Sloppy Alloy 
+60,Hard Alloy 
+61,Awesome Alloy 
+62,Magic Alloy 
+63,Demon's Ore 
+64,Familiar Liquid 
+65,Hot Liquid 
+66,Cold Liquid 
+67,Rainbow Liquid 
+68,Demon Liquid 
+69,Gnarly Stew 
+6a,Tasty Stew 
+6b,King's Stew 
+6c,Divine Stew 
+6d,Demon Stew 
+6e,Wooden Spear 
+6f,Iron Spear 
+70,Steel Spear 
+71,Scorching Spear 
+72,Dokaknel's Fang 
+73,Ancient Spear 
+74,Giant Spear "Bullet" 
+75,Divine Spear<N0> 
+76,Spear of Protection 
+77,Ice Spear 
+78,Dream Spear 
+79,Thunder Spear 
+7a,Great Fire Spear 
+7b,Great Ice Spear 
+7c,Great Thunder Spear 
+7d,Heaven Spear 
+7e,Magic Spear Brugnuk 
+7f,Friendship Spear 
+80,　 
+81,　 
+82,Tin Axe 
+83,Iron Sword 
+84,Steel Axe 
+85,Sleep Sword 
+86,Flame Sword 
+87,Ancient Axe 
+88,Giant Sword "The Butcher" 
+89,Divine Sword<N0> 
+8a,Gong's Scythe 
+8b,Ice Sword 
+8c,Thunder Sword 
+8d,Great Fire Axe 
+8e,Great Ice Axe 
+8f,Great Thunder Axe 
+90,Heaven Sword 
+91,Magic Axe Lapris 
+92,Friendship Sword 
+93,Great God Armour 
+94,　 
+95,Sword of the late Tatepon 
+96,Wood Shield 
+97,Iron Shield 
+98,Steel Shield 
+99,Ice Shield 
+9a,Ultra Heavy Shield 
+9b,Ancient Shield 
+9c,Giant Shield "Octagon" 
+9d,Divine Shield<N0> 
+9e,Fire Shield 
+9f,Thunder Shield 
+a0,Wing Shield 
+a1,Flying Shield 
+a2,Sun Shield 
+a3,Dragon Shield 
+a4,Heaven Shield 
+a5,Magic Shield Algos 
+a6,Friendship Shield 
+a7,　 
+a8,　 
+a9,　 
+aa,Wooden Bow 
+ab,Iron Bow 
+ac,Steel Bow 
+ad,Flame Bow 
+ae,Piercing Bow 
+af,Ancient Bow 
+b0,Giant Bow "Failnaught" 
+b1,Divine Bow<N0> 
+b2,Ice Bow 
+b3,Dream Bow 
+b4,Thunder Bow 
+b5,Great Fire Bow 
+b6,Great Ice Bow 
+b7,Great Thunder Bow 
+b8,Heaven Bow 
+b9,Magic Bow Flein 
+ba,Friendship Bow 
+bb,　 
+bc,　 
+bd,Bow of the late Yumipon 
+be,Wooden Halberd 
+bf,Iron Halberd 
+c0,Steel Halberd 
+c1,Deflecting Halberd 
+c2,Flame Halberd 
+c3,Ancient Halberd 
+c4,Giant Halberd "Grizzly" 
+c5,Divine Halberd<N0> 
+c6,Ice Lance 
+c7,Dream Lance 
+c8,Thunder Lance 
+c9,Great Fire Lance 
+ca,Great Ice Lance 
+cb,Great Thunder Lance 
+cc,Heaven Lance 
+cd,Magic Lance Gugnir 
+ce,Friendship Lance 
+cf,　 
+d0,　 
+d1,　 
+d2,Horse 
+d3,Fast Horse 
+d4,Tough Horse 
+d5,Strong Horse 
+d6,Crimson Horse 
+d7,Ancient Horse 
+d8,Deep Impact 
+d9,Divine Horse<N0> 
+da,Blue Horse 
+db,Yellow Horse 
+dc,Burning Horse 
+dd,Lightning Horse 
+de,Ice Horse 
+df,Dragon Horse 
+e0,Heaven Horse 
+e1,Magic Horse Sleipnir 
+e2,Friendship Horse 
+e3,　 
+e4,　 
+e5,　 
+e6,Club 
+e7,Iron Hammer 
+e8,Steel Mace 
+e9,Nail Studded Bat 
+ea,Dream Weaver 
+eb,Ancient Hammer 
+ec,Morning Star "Giganto" 
+ed,Divine Axe<N0> 
+ee,Fire Club 
+ef,Ice Club 
+f0,Thunder Club 
+f1,Great Fire Club 
+f2,Great Ice Club 
+f3,Great Thunder Club 
+f4,Heaven Club 
+f5,Magic Club Thor 
+f6,Friendship Club 
+f7,　 
+f8,　 
+f9,　 
+fa,Leather Shoulder 
+fb,Iron Shoulder 
+fc,Steel Shoulder 
+fd,Wind Shoulder 
+fe,Heavy Shoulder 
+ff,Drum Shoulder 
+100,Great Shoulder Gigas 
+101,Divine Shoulder <N0> 
+102,Fire Shoulder 
+103,Thunder Shoulder 
+104,Snow Shoulder 
+105,Flying Shoulder 
+106,Sun Shoulder 
+107,Dragon Shoulder 
+108,Heaven Shoulder 
+109,Magic Shoulder Chronos 
+10a,Friendship Shoulder 
+10b,　 
+10c,　 
+10d,　 
+10e,Wood Horn 
+10f,Iron Horn 
+110,Steel Horn 
+111,Dogaeen's Horn 
+112,Cioking's Horn 
+113,Shookle's Horn 
+114,Ancient Horn 
+115,Divine Horn<N0> 
+116,Fire Flute 
+117,Ice Flute 
+118,Thunder Flute 
+119,Great Fire Flute 
+11a,Great Ice Flute 
+11b,Great Thunder Flute 
+11c,Heaven Flute 
+11d,Magic Flute Hamlin 
+11e,Friendship Flute 
+11f,　 
+120,　 
+121,　 
+122,Cotton Cape 
+123,Leather Cape 
+124,Silk Cape 
+125,Wind Mantle 
+126,Cape of Strength 
+127,Wing Cape 
+128,Drum Mantle 
+129,Mighty Pata Mantle <N0> 
+12a,Fire Mantle 
+12b,Thunder Mantle 
+12c,Snow Mantle 
+12d,Flying Mantle 
+12e,Sun Mantle 
+12f,Dragon Mantle 
+130,Heaven Mantle 
+131,Magic Clothes Vamp 
+132,Friendship Mantle 
+133,　 
+134,　 
+135,　 
+136,Wood Javelin 
+137,Iron Javelin 
+138,Steel Javelin 
+139,Fire Javelin 
+13a,Piercing Javelin 
+13b,Drum Javelin 
+13c,Giant Javelin 
+13d,Mighty Pata Javelin <N0> 
+13e,Ice Javelin 
+13f,Dream Javelin 
+140,Thunder Javelin 
+141,Great Fire Javelin 
+142,Great Ice Javelin 
+143,Great Thunder Javelin 
+144,Heaven Javelin 
+145,Magic Javelin Gaebolg 
+146,Friendship Javelin 
+147,　 
+148,　 
+149,　 
+14a,Bird 
+14b,Fast Bird 
+14c,Tough Bird 
+14d,Strong Bird 
+14e,Red Bird 
+14f,Drum Bird 
+150,Garuda 
+151,Mighty Pata Bird <N0> 
+152,Blue Bird 
+153,Yellow Bird 
+154,Flame Bird 
+155,Thunderbird 
+156,Ice Bird 
+157,Dragon Bird 
+158,Heaven Bird 
+159,Magic Bird Onmoraki 
+15a,Friendship Bird 
+15b,　 
+15c,　 
+15d,　 
+15e,Brick Arm 
+15f,Iron Arm 
+160,Steel Arm 
+161,Burst Arm 
+162,Fire Arm 
+163,Drum Arm 
+164,Great Golem Arm 
+165,Divine Fist <N0> 
+166,Ice Arm 
+167,Dream Arm 
+168,Thunder Arm 
+169,Great Fire Arm 
+16a,Great Ice Arm 
+16b,Great Thunder Arm 
+16c,Heaven Arm 
+16d,Magic Arm Quill 
+16e,Friendship Arm 
+16f,　 
+170,　 
+171,　 
+172,(no translation needed) 
+173,(no translation needed) 
+174,(no translation needed) 
+175,(no translation needed) 
+176,(no translation needed) 
+177,(no translation needed) 
+178,(no translation needed) 
+179,(no translation needed) 
+17a,(no translation needed) 
+17b,(no translation needed) 
+17c,(no translation needed) 
+17d,(no translation needed) 
+17e,(no translation needed) 
+17f,(no translation needed) 
+180,(no translation needed) 
+181,(no translation needed) 
+182,(no translation needed) 
+183,(no translation needed) 
+184,(no translation needed) 
+185,(no translation needed) 
+186,Wood Staff 
+187,Iron Staff 
+188,Silver Staff 
+189,Defense Staff 
+18a,Fire Staff 
+18b,Soothing Staff 
+18c,Drum Staff 
+18d,Mighty Pata Staff <N0> 
+18e,Ice Staff 
+18f,Healing Staff 
+190,Thunder Staff 
+191,Great Fire Staff 
+192,Great Ice Staff 
+193,Great Thunder Staff 
+194,Heaven Staff 
+195,Magic Staff Rune 
+196,Friendship Staff 
+197,　 
+198,　 
+199,　 
+19a,Wood Shoes 
+19b,Leather Sandals 
+19c,Glass Shoes 
+19d,Wind Shoes 
+19e,Boots of Strength 
+19f,Wing Boots 
+1a0,Drum Shoes 
+1a1,Mighty Pata Shoes <N0> 
+1a2,Fire Shoes 
+1a3,Thunder Shoes 
+1a4,Snow Shoes 
+1a5,Flying Shoes 
+1a6,Sun Shoes 
+1a7,Dragon Shoes 
+1a8,Heaven Shoes 
+1a9,Magic Shoes Lilith 
+1aa,Friendship Shoes 
+1ab,　 
+1ac,　 
+1ad,　 
+1ae,Wooden Helm 
+1af,Iron Helm 
+1b0,Steel Helm 
+1b1,Wind Helm 
+1b2,Strength Helm 
+1b3,Ancient Helm 
+1b4,Giant Helm "Turtle" 
+1b5,Divine Helm<N0> 
+1b6,Bunny Head 
+1b7,Scorpiton Helm 
+1b8,Spiderton Helm 
+1b9,Beetleton Helm 
+1ba,Gong's Helm 
+1bb,Fire Helm 
+1bc,Thunder Helm 
+1bd,Snow Helm 
+1be,Flying Helm 
+1bf,Sun Helm 
+1c0,Dragon Helm 
+1c1,Wing Helm 
+1c2,Cook's Hat 
+1c3,Jeweled Tiara 
+1c4,Samurai Head 
+1c5,Heaven Helm 
+1c6,Magic Helm Hades 
+1c7,Friendship Helm 
+1c8,Great God Helmet 
+1c9,Lordly Hairpiece 
+1ca,　 
+1cb,　 
+1cc,(no translation needed) 
+1cd,(no translation needed) 
+1ce,(no translation needed) 
+1cf,(no translation needed) 
+1d0,(no translation needed) 
+1d1,(no translation needed) 
+1d2,(no translation needed) 
+1d3,(no translation needed) 
+1d4,(no translation needed) 
+1d5,(no translation needed) 
+1d6,(no translation needed) 
+1d7,(no translation needed) 
+1d8,(no translation needed) 
+1d9,(no translation needed) 
+1da,(no translation needed) 
+1db,(no translation needed) 
+1dc,(no translation needed) 
+1dd,(no translation needed) 
+1de,(no translation needed) 
+1df,(no translation needed) 
+1e0,(no translation needed) 
+1e1,(no translation needed) 
+1e2,(no translation needed) 
+1e3,(no translation needed) 
+1e4,(no translation needed) 
+1e5,(no translation needed) 
+1e6,(no translation needed) 
+1e7,(no translation needed) 
+1e8,(no translation needed) 
+1e9,(no translation needed) 
+1ea,(no translation needed) 
+1eb,(no translation needed) 
+1ec,(no translation needed) 
+1ed,(no translation needed) 
+1ee,(no translation needed) 
+1ef,(no translation needed) 
+1f0,(no translation needed) 
+1f1,(no translation needed) 
+1f2,(no translation needed) 
+1f3,(no translation needed) 
+1f4,(no translation needed) 
+1f5,(no translation needed) 
+1f6,(no translation needed) 
+1f7,(no translation needed) 
+1f8,(no translation needed) 
+1f9,(no translation needed) 
+1fa,(no translation needed) 
+1fb,(no translation needed) 
+1fc,(no translation needed) 
+1fd,(no translation needed) 
+1fe,(no translation needed) 
+1ff,(no translation needed) 
+200,(no translation needed) 
+201,(no translation needed) 
+202,(no translation needed) 
+203,(no translation needed) 
+204,(no translation needed) 
+205,(no translation needed) 
+206,(no translation needed) 
+207,(no translation needed) 
+208,(no translation needed) 
+209,(no translation needed) 
+20a,(no translation needed) 
+20b,(no translation needed) 
+20c,(no translation needed) 
+20d,(no translation needed) 
+20e,(no translation needed) 
+20f,(no translation needed) 
+210,(no translation needed) 
+211,(no translation needed) 
+212,(no translation needed) 
+213,(no translation needed) 
+214,(no translation needed) 
+215,(no translation needed) 
+216,(no translation needed) 
+217,(no translation needed) 
+218,(no translation needed) 
+219,(no translation needed) 
+21a,(no translation needed) 
+21b,(no translation needed) 
+21c,(no translation needed) 
+21d,(no translation needed) 
+21e,(no translation needed) 
+21f,(no translation needed) 
+220,(no translation needed) 
+221,(no translation needed) 
+222,(no translation needed) 
+223,(no translation needed) 
+224,(no translation needed) 
+225,(no translation needed) 
+226,(no translation needed) 
+227,(no translation needed) 
+228,(no translation needed) 
+229,(no translation needed) 
+22a,(no translation needed) 
+22b,(no translation needed) 
+22c,(no translation needed) 
+22d,(no translation needed) 
+22e,(no translation needed) 
+22f,(no translation needed) 
+230,(no translation needed) 
+231,(no translation needed) 
+232,(no translation needed) 
+233,(no translation needed) 
+234,(no translation needed) 
+235,Sutata 
+236,Suttata 
+237,Sutatattan 
+238,Sutatanooo 
+239,Gashishi 
+23a,Gasshin 
+23b,Zugashi 
+23c,Gasshingaa 
+23d,Gochichi 
+23e,Gocchin 
+23f,Cocchinko 
+240,Gochigachidesu 
+241,Shuba 
+242,Shubaba 
+243,Shubabiya 
+244,Shubabassa 
+245,Bishiri 
+246,Bisharin 
+247,Donpisha 
+248,Dopishana 
+249,Gurara 
+24a,Guraran 
+24b,Guranguran 
+24c,Gurarandaa 
+24d,Ototo 
+24e,Ottoto 
+24f,Ottototo 
+250,Ototodokko 
+251,Merara 
+252,Meracchi 
+253,Meraachichi 
+254,Meraachiize 
+255,Kachichi 
+256,Kachikochi 
+257,Kachinkon 
+258,Kacchikochin 
+259,Nekoro 
+25a,Nenkoro 
+25b,Nenkorori 
+25c,Nekororinyo 
+25d,Kakin 
+25e,Kakikoki 
+25f,Kakkinko 
+260,Kakkokingu 
+261,Hirara 
+262,Hirarin 
+263,Hiraratto 
+264,Hirarinmaru 
+265,Biyoyo 
+266,Biyoyon 
+267,Byororon 
+268,Babyobyon 
+269,Doshishi 
+26a,Dosshiri 
+26b,Zundoshiri 
+26c,Doshirittan 
+26d,Chitoto 
+26e,Chitton 
+26f,Chittoriyo 
+270,Chittoriine 
+271,Meranya 
+272,Nameranya 
+273,Dameranya 
+274,Dameranyan 
+275,Popoka 
+276,Pokapoka 
+277,Popopokka 
+278,Poppkaana 
+279,Nonburu 
+27a,Nonbururu 
+27b,Nonnooburu 
+27c,Nonburussa 
+27d,Babiri 
+27e,Babirira 
+27f,Babiriino 
+280,Babinonnon 
+281,Jirin 
+282,Jiririn 
+283,Jinjirin 
+284,Jiririntan 
+285,Zubaba 
+286,Zubizuba 
+287,Zunzunbiba 
+288,Zubizubabaya 
+289,Kachiko 
+28a,Kachikochi 
+28b,Kacchinko 
+28c,Kachinkocchi 
+28d,Myuu 
+28e,Myuuto 
+28f,Myuutan 
+290,Myuutaron 
+291,Dogyuun 
+292,Dongyugyu 
+293,Dodongyuu 
+294,Zuddongyu 
+295,Subasara 
+296,Rabasara 
+297,Raparassa 
+298,Rapasaraana 
+299,Sutata 
+29a,Suttata 
+29b,Sutatattan 
+29c,Sutatanooo 
+29d,Gashishi 
+29e,Gasshin 
+29f,Zugashi 
+2a0,Gasshingaa 
+2a1,Gochichi 
+2a2,Gocchin 
+2a3,Cocchinko 
+2a4,Gochigachidesu 
+2a5,Shuba 
+2a6,Shubaba 
+2a7,Shubabiya 
+2a8,Shubabassa 
+2a9,Bishiri 
+2aa,Bisharin 
+2ab,Donpisha 
+2ac,Dopishana 
+2ad,Gurara 
+2ae,Guraran 
+2af,Guranguran 
+2b0,Gurarandaa 
+2b1,Ototo 
+2b2,Ottoto 
+2b3,Ottototo 
+2b4,Ototodokko 
+2b5,Merara 
+2b6,Meracchi 
+2b7,Meraachichi 
+2b8,Meraachiize 
+2b9,Kachichi 
+2ba,Kachikochi 
+2bb,Kachinkon 
+2bc,Kacchikochin 
+2bd,Nekoro 
+2be,Nenkoro 
+2bf,Nenkorori 
+2c0,Nekororinyo 
+2c1,Kakin 
+2c2,Kakikoki 
+2c3,Kakkinko 
+2c4,Kakkokingu 
+2c5,Hirara 
+2c6,Hirarin 
+2c7,Hiraratto 
+2c8,Hirarinmaru 
+2c9,Biyoyo 
+2ca,Biyoyon 
+2cb,Byororon 
+2cc,Babyobyon 
+2cd,Doshishi 
+2ce,Dosshiri 
+2cf,Zundoshiri 
+2d0,Doshirittan 
+2d1,Chitoto 
+2d2,Chitton 
+2d3,Chittoriyo 
+2d4,Chittoriine 
+2d5,Meranya 
+2d6,Nameranya 
+2d7,Dameranya 
+2d8,Dameranyan 
+2d9,Popoka 
+2da,Pokapoka 
+2db,Popopokka 
+2dc,Poppkaana 
+2dd,Nonburu 
+2de,Nonbururu 
+2df,Nonnooburu 
+2e0,Nonburussa 
+2e1,Babiri 
+2e2,Babirira 
+2e3,Babiriino 
+2e4,Babinonnon 
+2e5,Jirin 
+2e6,Jiririn 
+2e7,Jinjirin 
+2e8,Jiririntan 
+2e9,Zubaba 
+2ea,Zubizuba 
+2eb,Zunzunbiba 
+2ec,Zubizubabaya 
+2ed,Kachiko 
+2ee,Kachikochi 
+2ef,Kacchinko 
+2f0,Kachinkocchi 
+2f1,Myuu 
+2f2,Myuuto 
+2f3,Myuutan 
+2f4,Myuutaron 
+2f5,Dogyuun 
+2f6,Dongyugyu 
+2f7,Dodongyuu 
+2f8,Zuddongyu 
+2f9,Subasara 
+2fa,Rabasara 
+2fb,Raparassa 
+2fc,Rapasaraana 
+2fd,Head of Dodonga 
+2fe,Head of Majidonga 
+2ff,Head of Zaknel 
+300,Head of Dokaknel 
+301,Head of Gaeen 
+302,Head of Dogaeen 
+303,Cioking's Pincer 
+304,Ciokinna's Pincer 
+305,Head of Shookle 
+306,Head of Shooshookle 
+307,Head of Gorl 
+308,Head of Mocchichi 
+309,Head of Momoti 
+30a,Head of Motsitsi 
+30b,Kacheek 
+30c,Picheek 
+30d,Parcheek 
+30e,Poocheek 
+30f,Gancheek 
+310,Kacheek (sand) 
+311,Kacheek (swamp) 
+312,Kacheek (stone) 
+313,Garuru Head 
+314,Mochicchichi Head 
+315,Fenicchi Head 
+316,Manboroth Fang 
+317,Manboroth Fang 
+318,Centura Head 
+319,Darantula Head 
+31a,Kanogias Cannon 
+31b,Ganodias Cannon 
+31c,Dettankarmen Head 
+31d,Zuttankarmen Head 
+31e,Babato 
+31f,Pipat 
+320,Dobatto 
+321,Rappapa 
+322,Pekkora 
+323,Pekkorako 
+324,Uji 
+325,Uji 
+326,Kachindonga Head 
+327,Karcheek (Snow) 
+328,Normal 
+329,Normal 
+32a,Normal 
+32b,Pyopyo 
+32c,Pyokora 
+32d,Pyokoran 
+32e,Nyontama 
+32f,Gekoroth 
+330,Gekoronpa 
+331,Mofu 
+332,Mofuuru 
+333,Mofurumo 
+334,Chiku 
+335,Chikkuri 
+336,Chikurinchi 
+337,Mogyu 
+338,Mogyuun 
+339,Mogyugyu 
+33a,Sabara 
+33b,Baasara 
+33c,Babassa 
+33d,Buhyokko 
+33e,Buhyonku 
+33f,Puuhyonku 
+340,Fumya 
+341,Fumyaaru 
+342,Funmyaga 
+343,Wanda 
+344,Wandaba 
+345,Wandabata 
+346,Menyokki 
+347,Kisuk 
+348,Moriussoo 
+349,Chigyobi 
+34a,Gyopicchi 
+34b,Gyogyoppa 
+34c,Uhoho 
+34d,Uuhoho 
+34e,Uhokkya 
+34f,Mashu 
+350,Mashuro 
+351,Mashuriro 
+352,Koppen 
+353,Suppen 
+354,Supengu 
+355,Kanokko 
+356,Kanokyon 
+357,Kanodia 
+358,Gyaba 
+359,Gyabaan 
+35a,Wagyanba 
+35b,Dodonga Egg Lv.<N11> 
+35c,Majidonga Egg Lv.<N12> 
+35d,Zaknel Egg Lv.<N13> 
+35e,Dokaknel Egg Lv.<N14> 
+35f,Gaeen Egg Lv.<N15> 
+360,Dogaeen Egg Lv.<N16> 
+361,Ciokina Egg Lv.<N17> 
+362,Cioking Egg Lv.<N18> 
+363,Shookle Egg Lv.<N19> 
+364,Shooshookle Egg Lv.<N20> 
+365,Goruru Egg Lv.<N21> 
+366,Garuru Egg Lv.<N22> 
+367,Mochicchichi Egg Lv.<N23> 
+368,Fenicchi Egg Lv.<N24> 
+369,Manboth Egg Lv.<N25> 
+36a,Manboroth Egg Lv.<N26> 
+36b,Centura Egg Lv.<N27> 
+36c,Darantula Egg Lv.<N28> 
+36d,Kanogias Egg Lv.<N29> 
+36e,Ganodias Egg Lv.<N30> 
+36f,Dettankarmen Egg Lv.<N31> 
+370,Zuttankarmen Egg Lv.<N32> 
+371,Kacchindonga Egg Lv.<N33> 
+372,Karmen Egg Lv. <N34> 
+373,Sword Summit Egg Lv. <N35> 
+374,Pharamatara Egg Lv.<N36> 
+375,Ice Fortress Egg Lv.<N37> 
+376,Oasis Battle Egg Lv. <N38> 
+377,Karmen Gate Egg Lv. <N39> 
+378,Underworld Egg Lv. <N40> 
+379,　 
+37a,　 
+37b,　 
+37c,　 
+37d,　 
+37e,　 
+37f,(Yaripon) Okishi 
+380,(Tatepon) Kabon 
+381,(Yumipon) Lutecci 
+382,(Kibapon) Silba 
+383,(Dekapon) Buruch 
+384,(Megapon) Natolie 
+385,(Yaripon) Moribu 
+386,(Tatepon) Kyuro 
+387,(Yumipon) Hassh 
+388,(Kibapon) Ladodon 
+389,(Dekapon) Germa 
+38a,(Megapon) Rolent 
+38b,(Toripon) Neoja 
+38c,(Robopon) Seren 
+38d,(Mahopon) Rantan 
+38e,(Yaripon) Pondere 
+38f,(Tatepon) Bakun 
+390,(Yumipon) Markyu 
+391,(Kibapon) Magmag 
+392,(Dekapon) Goldon 
+393,(Megapon) Serime 
+394,(Toripon) Sibou 
+395,(Robopon) Baryun 
+396,(Mahopon) Prati 
+397,(Toripon) Artom 
+398,Evolve to Yaripon 
+399,Evolve to Tatepon 
+39a,Evolve to Yumipon 
+39b,Evolve to Kibapon 
+39c,Evolve to Dekapon 
+39d,Evolve to Megapon 
+39e,Evolve to Toripon 
+39f,Evolve to Robopon 
+3a0,Evolve to Mahopon 
+3a1,Blank Map 
+3a2,Bent Compass 
+3a3,Dusty Crystal 
+3a4,Broken Sign 
+3a5,Black Star 
+3a6,Dark Palace Model 

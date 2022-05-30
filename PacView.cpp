@@ -4,6 +4,13 @@
 #include <sstream>
 #include <iomanip>
 #include <windows.h>
+#include <math.h>
+#include <cstring>
+#include <wchar.h>
+#include <stdio.h>
+#include <locale.h>
+#include <codecvt>
+#include <format>
 
 using namespace std;
 
@@ -53,23 +60,105 @@ unsigned int hstoui(const string &str)
     return u;
 }
 
+std::wstring utf8_to_utf16(const std::string& utf8)
+{
+    std::vector<unsigned long> unicode;
+    size_t i = 0;
+    while (i < utf8.size())
+    {
+        unsigned long uni;
+        size_t todo;
+        bool error = false;
+        unsigned char ch = utf8[i++];
+        if (ch <= 0x7F)
+        {
+            uni = ch;
+            todo = 0;
+        }
+        else if (ch <= 0xBF)
+        {
+            throw std::logic_error("not a UTF-8 string");
+        }
+        else if (ch <= 0xDF)
+        {
+            uni = ch&0x1F;
+            todo = 1;
+        }
+        else if (ch <= 0xEF)
+        {
+            uni = ch&0x0F;
+            todo = 2;
+        }
+        else if (ch <= 0xF7)
+        {
+            uni = ch&0x07;
+            todo = 3;
+        }
+        else
+        {
+            throw std::logic_error("not a UTF-8 string");
+        }
+        for (size_t j = 0; j < todo; ++j)
+        {
+            if (i == utf8.size())
+                throw std::logic_error("not a UTF-8 string");
+            unsigned char ch = utf8[i++];
+            if (ch < 0x80 || ch > 0xBF)
+                throw std::logic_error("not a UTF-8 string");
+            uni <<= 6;
+            uni += ch & 0x3F;
+        }
+        if (uni >= 0xD800 && uni <= 0xDFFF)
+            throw std::logic_error("not a UTF-8 string");
+        if (uni > 0x10FFFF)
+            throw std::logic_error("not a UTF-8 string");
+        unicode.push_back(uni);
+    }
+    std::wstring utf16;
+    for (size_t i = 0; i < unicode.size(); ++i)
+    {
+        unsigned long uni = unicode[i];
+        if (uni <= 0xFFFF)
+        {
+            utf16 += (wchar_t)uni;
+        }
+        else
+        {
+            uni -= 0x10000;
+            utf16 += (wchar_t)((uni >> 10) + 0xD800);
+            utf16 += (wchar_t)((uni & 0x3FF) + 0xDC00);
+        }
+    }
+    return utf16;
+}
+
 void copyToClipboard(std::string word)
 {
-    const char* output = word.c_str();
-    const size_t len = strlen(output) + 1;
-    HGLOBAL hMem =  GlobalAlloc(GMEM_MOVEABLE, len);
-    memcpy(GlobalLock(hMem), output, len);
+    std::wstring ws = utf8_to_utf16(word);
+
+    const wchar_t* text = ws.c_str();
+    int len = wcslen(text);
+
+    HGLOBAL hMem = GlobalAlloc(GMEM_MOVEABLE, (len + 1) * sizeof(wchar_t));
+    wchar_t* buffer = (wchar_t*)GlobalLock(hMem);
+    wcscpy(buffer, text);
     GlobalUnlock(hMem);
-    OpenClipboard(0);
+
+    OpenClipboard(NULL);
     EmptyClipboard();
-    SetClipboardData(CF_TEXT, hMem);
+    SetClipboardData(CF_UNICODETEXT, hMem);
     CloseClipboard();
 }
 
-PacView::PacView(std::string workdir)
+sf::String ConvertToUtf8String(const std::string& s)
+{
+    return sf::String::fromUtf8(s.begin(), s.end());
+}
+
+PacView::PacView(std::string workdir, std::string ins_set, std::string eq_set)
 {
     cout << "[PAC] Working directory: " << workdir << endl;
-    font.loadFromFile(workdir+"arial.ttf");
+    font.loadFromFile(workdir+"p4kakupop-pro.ttf");
 
     box_div.setSize(sf::Vector2f(2,640));
     box_div.setFillColor(sf::Color::Black);
@@ -99,7 +188,7 @@ PacView::PacView(std::string workdir)
     cout << "[PAC] Loading instruction set... ";
 
     ///Read the instruction set
-    ifstream is(workdir+"instruction_set.bin");
+    ifstream is(workdir+ins_set);
     string buf;
     int ic = 0;
 
@@ -163,20 +252,21 @@ PacView::PacView(std::string workdir)
 
     el.close();
 
-    cout << "[PAC] Loaded entity list" << endl;
+    cout << "[PAC] Loaded entity list: " << entities.size() << " entries" << endl;
 
-    ifstream eq(workdir+"equiphex.dat");
+    ifstream eq(workdir+eq_set);
 
     while(getline(eq,buf))
     {
         string id = buf.substr(0,buf.find_first_of(","));
         string name = buf.substr(buf.find_first_of(",")+1);
+        //cout << id << " " << name << " " << hstoui(id) << endl;
         equips[hstoui(id)] = name;
     }
 
     eq.close();
 
-    cout << "[PAC] Loaded equipment list" << endl;
+    cout << "[PAC] Loaded equipment list: " << equips.size() << " entries" << endl;
 
     ifstream ek(workdir+"keybindhex.dat");
 
@@ -190,6 +280,19 @@ PacView::PacView(std::string workdir)
     ek.close();
 
     cout << "[PAC] Loaded keybind list" << endl;
+}
+
+void PacView::getEvent(sf::Event& event)
+{
+    //this causes segfault?????? what the fuck
+    /***std::cout << "Transferring event to message_boxes" << std::endl;
+    std::cout << "Boxes: ";
+    std::cout << message_boxes.size() << std::endl;
+    for(int i=0; i<message_boxes.size(); i++)
+    {
+        message_boxes[i].getEvent(event);
+    }
+    std::cout << "Done" << std::endl;**/
 }
 
 void PacView::read(std::string file)
@@ -243,7 +346,7 @@ void PacView::read(std::string file)
 
         int poff = offset;
 
-        if((a == 0x25) && (c != 0x0) && (d <= 0x1))
+        if((a == 0x25) && (c != 0x0) && (d <= 0x23))
         {
             if(binary_buff.size() > 4)
             {
@@ -292,7 +395,7 @@ void PacView::read(std::string file)
                     pacf.seekg(tmp_off+0x3);
                     pacf.read(reinterpret_cast<char*>(&dd), sizeof(uint8_t));
 
-                    while(!((aa == 0x25) && (cc != 0x0) && (dd <= 0x1)))
+                    while(!((aa == 0x25) && (cc != 0x0) && (dd <= 0x23)))
                     {
                         pacf.seekg(tmp_off);
                         pacf.read(reinterpret_cast<char*>(&aa), sizeof(uint8_t));
@@ -303,7 +406,7 @@ void PacView::read(std::string file)
                         pacf.seekg(tmp_off+0x3);
                         pacf.read(reinterpret_cast<char*>(&dd), sizeof(uint8_t));
 
-                        if(!((aa == 0x25) && (cc != 0x0) && (dd <= 0x1)))
+                        if(!((aa == 0x25) && (cc != 0x0) && (dd <= 0x23)))
                         {
                             for(int e=0; e<4; e++)
                             {
@@ -504,7 +607,7 @@ void PacView::draw(sf::RenderWindow& window)
             t_ins[i].setPosition(144,i*24);
 
             t_params[i].setFont(font);
-            t_params[i].setString(instructions[i+scroll].f_param);
+            t_params[i].setString(ConvertToUtf8String(instructions[i+scroll].f_param));
             t_params[i].setCharacterSize(16);
             t_params[i].setFillColor(sf::Color::Black);
             t_params[i].setPosition(360,i*24);
@@ -659,7 +762,7 @@ void PacView::draw(sf::RenderWindow& window)
                 break;
 
                 case 0x1C:
-                i_color[i].setFillColor(sf::Color(86,74,25,255));
+                i_color[i].setFillColor(sf::Color(186,174,125,255));
                 break;
 
                 case 0x1D:
@@ -683,6 +786,50 @@ void PacView::draw(sf::RenderWindow& window)
                 box_desc.setCharacterSize(14);
                 box_desc.setFillColor(sf::Color::Black);
                 box_desc.setPosition(646,24);
+
+                if(keyMap[sf::Keyboard::E])
+                {
+                    cout << "Creating a new message box" << endl;
+
+                    /**
+                    string rawstring = "";
+
+                    for(int r=0; r<instructions[i+scroll].raw_data.size(); r++)
+                    {
+                        rawstring += to_hexstring(int(instructions[i+scroll].raw_data[r]),1)+" ";
+                    }
+
+                    string rawstring2 = "";
+
+                    for(int r=0; r<rawstring.size(); r++)
+                    {
+                        rawstring2 += rawstring[r];
+
+                        if((r+1) % 36 == 0)
+                        {
+                            rawstring2 += "\n";
+                        }
+                    }
+                    **/
+
+                    string pachex = "";
+
+                    for(int r=0; r<instructions[i+scroll].raw_data.size(); r++)
+                    {
+                        pachex += to_hexstring(int(instructions[i+scroll].raw_data[r]),1);
+                    }
+
+                    cout << "Pachex: " << pachex << endl;
+
+                    std::vector<std::string> buttons;
+                    buttons.push_back("Apply");
+                    buttons.push_back("Cancel");
+
+                    PacMessageBox tmp;
+                    tmp.Create(font, "Editing pac function", true, pachex, sf::Vector2f(260,140), buttons);
+                    //tmp.Create(font, "This is an example message box for PacViewer tool.", true, "This is an input box. Write text here", sf::Vector2f(260,140), buttons);
+                    message_boxes.push_back(tmp);
+                }
 
                 if(view == 0)
                 {
@@ -715,7 +862,7 @@ void PacView::draw(sf::RenderWindow& window)
                 }
                 else if(view == 1)
                 {
-                    box_desc.setString(instructions[i+scroll].f_desc);
+                    box_desc.setString(ConvertToUtf8String(instructions[i+scroll].f_desc));
 
                     if(keyMap[sf::Keyboard::R])
                     {
@@ -725,7 +872,7 @@ void PacView::draw(sf::RenderWindow& window)
                 }
                 else if(view == 2)
                 {
-                    box_desc.setString(instructions[i+scroll].f_desc_translated);
+                    box_desc.setString(ConvertToUtf8String(instructions[i+scroll].f_desc_translated));
 
                     if(keyMap[sf::Keyboard::R])
                     {
@@ -845,6 +992,11 @@ void PacView::draw(sf::RenderWindow& window)
     window.draw(t_view[0]);
     window.draw(t_view[1]);
     window.draw(t_view[2]);
+
+    for(int i=0; i<message_boxes.size(); i++)
+    {
+        message_boxes[i].Draw(window);
+    }
 
     if(keyMap[sf::Keyboard::S])
     {
